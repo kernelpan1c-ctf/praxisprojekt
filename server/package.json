@@ -1,0 +1,19 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "description": "REST API",
+  "main": "server.js",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "author": "Justus Schleicher",
+  "dependencies": {
+    "body-parser": "^1.8.3",
+    "express": "^4.9.4",
+    "mongoose": "^4.0.2",
+    "morgan": "^1.6.1"
+  },
+  "devDependencies": {
+    "debug": "^2.2.0"
+  }
+}
