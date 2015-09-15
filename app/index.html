@@ -1,0 +1,40 @@
+<html>
+<head>
+
+    <title>Timetracker</title>
+
+    <!-- ### Für production ###
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
+-->
+
+    <!-- ### Für development ###-->
+    <script src="www/assets/lib/angular/angular.js"></script>
+    <script src="www/assets/lib/angular/angular-resource.js"></script>
+    <script src="www/assets/lib/angular/angular-route.js"></script>
+
+    <!-- ### App.js, Controller & Services ### -->
+    <script src="www/app.js"></script>
+    <script src="www/views/login/loginController.js"></script>
+    <script src="www/views/privacy/privacyController.js"></script>
+
+    <!-- ### CSS Files ### -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="www/assets/css/style.css">
+
+</head>
+<body ng-app="app">
+<div id='main' class="container">
+    <nav class="navbar-fluid navbar-default navbar-fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"> Main </a>
+            <p class="navbar-text">Tracking time is using time</p>
+        </div>
+    </nav>
+    <div class="col-md-offset-2 col-md-8">
+        <div ng-view>
+        </div>
+    </div>
+</div>
+</body>
+</html>
