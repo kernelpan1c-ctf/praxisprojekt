@@ -13,8 +13,8 @@ var app = angular.module('app', ['ngRoute']);
                 controller: 'privacyController'
             })
             .when('/main',{
-                templateUrl: 'main.html',
-                controller: 'mainController'
+                templateUrl: 'www/views/timer/timerView.html',
+                controller: 'timerController'
             })
 
     });

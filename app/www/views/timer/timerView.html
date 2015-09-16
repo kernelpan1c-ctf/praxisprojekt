@@ -1,72 +1,45 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <title>Time record</title>
-    <script src="../angular/angular.min.js"></script>
-    <script src="../app/js/timer.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="dropdown.js"></script>
-    <link rel="stylesheet" type="text/css" href="startbutton.css">
-    <link rel="stylesheet" type="text/css" href="stopbutton.css">
-    <link rel="stylesheet" type="text/css" href="dropdown.css">
-    <script>
-        angular.module('MyApp', ['timer']);
-        function MyAppController($scope) {
-            $scope.timerRunning = true;
-
-            $scope.startTimer = function (){
-                $scope.$broadcast('timer-start');
-                $scope.timerRunning = true;
-            };
-
-            $scope.stopTimer = function (){
-                $scope.$broadcast('timer-stop');
-                $scope.timerRunning = false;
-            };
-
-            $scope.$on('timer-stopped', function (event, data){
-                console.log('Timer Stopped - data = ', data);
-            });
-        }
-        MyAppController.$inject = ['$scope'];
-    </script>
-</head>
-<body ng-app="MyApp">
 <center>
-<div ng-controller="DropdownController as Drop">
+    <div ng-controller="timerController as Drop">
 
-    <div id="ddcourse" class="wrapper-dropdown-3" tabindex="1">
-        <span>Pick your course</span>
-        <ul class="dropdown">
-            <li ng-repeat="course in Drop.courses"><a href="dropdown.css"><i class="icon-envelope icon-large"></i>Classic mail</a></li>
-        </ul>
+        <div id="ddcourse" class="wrapper-dropdown-3" tabindex="1">
+            <span>Pick your course</span>
+            <ul class="dropdown">
+                <li ng-repeat="course in Drop.courses"><a href="../../assets/css/dropdown.css"><i class="icon-envelope icon-large"></i>Classic
+                    mail</a></li>
+            </ul>
+        </div>
+        <br>
+
+        <div id="ddeffort" class="wrapper-dropdown-3" tabindex="1">
+            <span>Choose your effort</span>
+            <ul class="dropdown">
+                <li ng-repeat="effort in Drop.efforts"><a href="../../assets/css/dropdown.css"><i class="icon-envelope icon-large"></i>Classic
+                    mail</a></li>
+            </ul>
+        </div>
     </div>
-    <br>
-    <div id="ddeffort" class="wrapper-dropdown-3" tabindex="1">
-        <span>Choose your effort</span>
-        <ul class="dropdown">
-            <li ng-repeat="effort in Drop.efforts"><a href="dropdown.css"><i class="icon-envelope icon-large"></i>Classic mail</a></li>
-        </ul>
+
+    <div ng-controller="timerController">
+        <br>
+        <button href="startbutton.css" class="startButton" ng-click="startTimer()" ng-hide="timerRunning">Start</button>
+        <button href="stopbutton.css" class="stopButton" ng-click="stopTimer()" ng-hide="!timerRunning">Stop</button>
+        <br>
+        <label>Current Time:</label>
+        <br>
+
+        <div style="border:#ffffff; solid: 2px #ff0000;">
+            <h3>
+                <timer/>
+                {{4+3}}
+            </h3>
+        </div>
+        <br>
+        <button type="submit"
+                style="background-color: midnightblue;color: white;border-color: midnightblue;border-radius: 4px">Submit
+        </button>
     </div>
-</div>
-
-<div ng-controller="MyAppController">
-    <br>
-    <button href="startbutton.css" class="startButton" ng-click="startTimer()" ng-hide="timerRunning">Start</button>
-    <button href="stopbutton.css" class="stopButton" ng-click="stopTimer()" ng-hide="!timerRunning">Stop</button>
-    <br>
-    <label>Current Time:</label>
-    <br>
-    <div style="border: #; solid: 2px #ff0000;">
-    <h3><timer/></h3>
-    </div>
-    <br>
-    <button type="submit" style="background-color: midnightblue;color: white;border-color: midnightblue;border-radius: 4px">Submit</button>
-
-
-</div>
-<br/>
+    <br/>
 </center>
-</body>
 </html>
 
