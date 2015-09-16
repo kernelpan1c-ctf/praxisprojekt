@@ -1,11 +1,11 @@
 <html>
 <center>
-    <div ng-controller="timerController as Drop">
+    <div>
 
         <div id="ddcourse" class="wrapper-dropdown-3" tabindex="1">
             <span>Pick your course</span>
             <ul class="dropdown">
-                <li ng-repeat="course in Drop.courses"><a href="../../assets/css/dropdown.css"><i class="icon-envelope icon-large"></i>Classic
+                <li ng-repeat="course in courses"><a href="../../assets/css/dropdown.css"><i class="icon-envelope icon-large"></i>Classic
                     mail</a></li>
             </ul>
         </div>
@@ -14,7 +14,7 @@
         <div id="ddeffort" class="wrapper-dropdown-3" tabindex="1">
             <span>Choose your effort</span>
             <ul class="dropdown">
-                <li ng-repeat="effort in Drop.efforts"><a href="../../assets/css/dropdown.css"><i class="icon-envelope icon-large"></i>Classic
+                <li ng-repeat="effort in efforts"><a href="../../assets/css/dropdown.css"><i class="icon-envelope icon-large"></i>Classic
                     mail</a></li>
             </ul>
         </div>
