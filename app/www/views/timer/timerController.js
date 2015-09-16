@@ -38,8 +38,8 @@ angular.module('app')
                 name: "Übungen"
             }
         ];
-        this.courses = coursearray;
-        this.efforts = effortarray;
+        $scope.courses = coursearray;
+        $scope.efforts = effortarray;
     });
 
 //timerController.$inject = ['$scope'];

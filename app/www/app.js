@@ -16,7 +16,6 @@ var app = angular.module('app', ['ngRoute']);
                 templateUrl: 'www/views/timer/timerView.html',
                 controller: 'timerController'
             })
-
     });
 
 var options = {};

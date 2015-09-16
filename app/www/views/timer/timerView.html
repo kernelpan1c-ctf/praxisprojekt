@@ -1,7 +1,5 @@
 <html>
-<center>
     <div>
-
         <div id="ddcourse" class="wrapper-dropdown-3" tabindex="1">
             <span>Pick your course</span>
             <ul class="dropdown">
@@ -22,8 +20,8 @@
 
     <div>
         <br>
-        <button href="startbutton.css" class="startButton" ng-click="startTimer()" ng-hide="timerRunning">Start</button>
-        <button href="stopbutton.css" class="stopButton" ng-click="stopTimer()" ng-hide="!timerRunning">Stop</button>
+        <button class="startButton" ng-click="startTimer()" ng-hide="timerRunning">Start</button>
+        <button class="stopButton" ng-click="stopTimer()" ng-hide="!timerRunning">Stop</button>
         <br>
         <label>Current Time:</label>
         <br>
@@ -31,15 +29,12 @@
         <div style="border:#ffffff; solid: 2px #ff0000;">
             <h3>
                 <timer/>
-                {{4+3}}
+                {{courses[0].name}}
             </h3>
         </div>
         <br>
-        <button type="submit"
-                style="background-color: midnightblue;color: white;border-color: midnightblue;border-radius: 4px">Submit
-        </button>
+        <button type="submit" style="background-color: midnightblue;color: white;border-color: midnightblue;border-radius: 4px">Submit</button>
     </div>
     <br/>
-</center>
 </html>
 
