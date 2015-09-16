@@ -1,0 +1,22 @@
+.startButton {
+    background-color: #7aba7b;
+    -moz-border-radius:40px;
+    -webkit-border-radius:40px;
+    border-radius:40px;
+    border:1px solid #18ab29;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding:25px 18px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+}
+.startButton:hover {
+    background-color: #5eb95e;
+}
+.startButton:active {
+    position:relative;
+    top:1px;
+}
