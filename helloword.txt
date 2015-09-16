@@ -1,4 +1,0 @@
-test 1
-test 2 - this is in the new branch
-test 3 - New branch for merge demonstration
-test 4 - another test
