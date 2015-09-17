@@ -12,10 +12,19 @@ var app = angular.module('app', ['ngRoute']);
                 templateUrl: 'www/views/privacy/privacyView.html',
                 controller: 'privacyController'
             })
+            .when('/home',{
+                templateUrl: 'www/views/timer/timerView.html',
+                controller: 'timerController'
+            })
+            .when('/settings',{
+                templateUrl: 'www/views/settings/settingsView.html',
+                controller: 'settingsController'
+            })
             .when('/main',{
                 templateUrl: 'www/views/timer/timerView.html',
                 controller: 'timerController'
             })
+        
     });
 
 var options = {};
