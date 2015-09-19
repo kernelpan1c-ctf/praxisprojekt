@@ -12,12 +12,16 @@
     <script src="www/assets/lib/angular/angular.js"></script>
     <script src="www/assets/lib/angular/angular-resource.js"></script>
     <script src="www/assets/lib/angular/angular-route.js"></script>
-    <script src="www/assets/lib/angular-timer/app/js/_timer.js"></script>
+
+    <script src="www/assets/lib/angular-timer/angular-timer.js"></script>
+    <script src="www/views/timer/timer.js"></script>
 
     <!-- ### app.js, Controller & Services ### -->
     <script src="www/app.js"></script>
     <script src="www/views/login/loginController.js"></script>
     <script src="www/views/privacy/privacyController.js"></script>
+    <script src="www/views/timer/timerController.js"></script>
+    <script src="www/views/settings/settingsController.js"></script>
 
     <!-- ### JS Hilfe Files ### -->
     <script type="text/javascript" src="www/views/timer/dropdown.js"></script>
@@ -25,9 +29,6 @@
     <!-- ### CSS Files ### -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="www/assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="www/assets/css/startbutton.css">
-    <link rel="stylesheet" type="text/css" href="www/assets/css/stopbutton.css">
-    <link rel="stylesheet" type="text/css" href="www/assets/css/dropdown.css">
     
     <script>
 function expandoffcanvasmenu(action){ //param: 'open', 'close', or empty to toggle menu state
@@ -230,7 +231,6 @@ input[type="checkbox"]#togglebox:checked ~ div.overlay{ /* overlay state when co
 </head>
 <body ng-app="app">
 
-    
 <input type="checkbox" id="togglebox" />
     <div class="overlay"><label for="togglebox"></label></div>
 

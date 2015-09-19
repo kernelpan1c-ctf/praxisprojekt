@@ -1,7 +1,7 @@
 angular.module('app')
 
     .controller('timerController', function ($scope) {
-        $scope.timerRunning = true;
+        $scope.timerRunning = false;
 
         $scope.startTimer = function () {
             $scope.$broadcast('timer-start');
@@ -41,5 +41,3 @@ angular.module('app')
         $scope.courses = coursearray;
         $scope.efforts = effortarray;
     });
-
-//timerController.$inject = ['$scope'];
